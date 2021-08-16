@@ -18,13 +18,3 @@ db.produtos.find({}, {
   nome: 1,
   tags: 1,
 });
-
-// db.produtos.find({
-//   valoresNutricionais: {
-//     $elemMatch: {
-//       percentual: {
-//         $gte: 40,
-//       },
-//     },
-//   },
-// }).pretty();
