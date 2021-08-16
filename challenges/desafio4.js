@@ -1,4 +1,4 @@
-odutos.updateOne(
+db.produtos.updateOne(
   { nome: "Big Mac" },
       {
         $currentDate:

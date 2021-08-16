@@ -1,4 +1,4 @@
-b.produtos.updateMany(
+db.produtos.updateMany(
   {},
     { $set:
       {
