@@ -1,5 +1,3 @@
-use("commerce");
-
 db.produtos.updateOne(
   {
     nome: "Cheddar McMelt",
