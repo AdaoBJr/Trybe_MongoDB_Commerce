@@ -3,12 +3,12 @@ db.produtos.find(
     $expr: {
       $gt: [
         "$curtidas",
-        "$vendidos"
-      ]
-    }
+        "$vendidos",
+      ],
+    },
   },
   {
     _id: 0,
-    nome: 1
-  }
+    nome: 1,
+  },
 );

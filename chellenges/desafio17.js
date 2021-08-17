@@ -1,13 +1,13 @@
 db.produtos.createIndex(
   {
-    descricao: "text"
-  }
+    descricao: "text",
+  },
 );
 
 db.produtos.count(
   {
     $text: {
-      $search: "frango hambúrguer"
-    }
-  }
+      $search: "frango hambúrguer",
+    },
+  },
 );
