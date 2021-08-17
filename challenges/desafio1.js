@@ -1,7 +1,7 @@
 db.produtos.update(
   {},
   {
-    $set: {"criadoPor": "Ronald McDonald"}
+    $set: { criadoPor: "Ronald McDonald" },
   },
   false,
   true,
@@ -9,5 +9,5 @@ db.produtos.update(
 
 db.produtos.find(
   {},
-  {_id: 0, "nome": 1, "criadoPor": 1},
+  { _id: 0, nome: 1, criadoPor: 1 },
 );
