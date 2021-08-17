@@ -1,5 +1,11 @@
 db.produtos.updateMany(
-    { "valoresNutricionais.percentual": { $gt: 20, $lt: 40 } },
+    { 
+      $and:
+      [
+        { "valoresNutricionais.$[index].tipo": "sódio" },
+        { "valoresNutricionais.$[index].percentual": { gt: 20, lt: 40 } }
+      ]
+    },
     {
         $push:
         {
