@@ -8,7 +8,7 @@ db.produtos.updateMany({
   },
 }, {
   arrayFilters: [{
-    "valoresNutricionais.tipo": "sódio",
+    "el.tipo": "sódio",
   }],
 });
 db.produtos.find({}, {
