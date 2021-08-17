@@ -12,24 +12,18 @@ db.produtos.updateMany(
 
 db.produtos.updateOne(
   { nome: { $eq: "Big Mac" } },
-  { $push: {
-    vendasPorDia: {
-      $each: [60],
-      $position: 4,
+  { $set: {
+      "vendasPorDia.4": 60,
     },
-  },
-  },
+  },  
 );
 
 db.produtos.updateMany(
   { tags: { $eq: ["bovino", "pão"] } },
-  { $push: {
-    vendasPorDia: {
-      $each: [120],
-      $position: 7,
+  { $set: {
+    "vendasPorDia.7": 120,
     },
   },
- },
 );
 
 db.produtos.find(
