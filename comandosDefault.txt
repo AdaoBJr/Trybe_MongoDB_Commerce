@@ -2,3 +2,6 @@
 use("commerce");
 
 db.produtos.find().limit(1);
+
+
+./scripts/evaluate.sh desafioN
