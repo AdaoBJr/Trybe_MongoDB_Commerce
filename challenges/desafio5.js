@@ -1,7 +1,7 @@
 // query 1:
 db.produtos.updateMany(
   { nome: { $ne: "McChicken" } },
-  { $push: 
+  { $addToSet: 
     { ingredientes: "ketchup" },
   },
 );
