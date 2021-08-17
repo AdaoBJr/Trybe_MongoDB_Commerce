@@ -14,7 +14,6 @@ db.produtos.updateMany(
   },
 );
 
-use("commerce");
 db.produtos.find(
   {},
   {
