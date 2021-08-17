@@ -1,8 +1,8 @@
 use("commerce");
 
 
+db.produtos
+.updateMany({ nome: { $in: ["Big Mac", "Quarteirão com Queijo"] } }, { $push: { ingredientes: "bacon" } })
 
 
-db.produtos.updateMany( { nome: { $ne: "McChicken" } }, { $addToSet: { ingredientes: "ketchup" } } )
-
-db.produtos.find( { }, { nome: true, _id: false, ingredientes: true })
+db.produtos.find({}, {nome: true, ingredientes: true, _id: false})
