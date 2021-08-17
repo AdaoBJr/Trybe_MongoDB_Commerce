@@ -1,9 +1,13 @@
 db.produtos.updateMany(
   {},
-  { $push: {
-    "valoresNutricionais.$[elemento].percentual": {
-      $each: [], $sort: -1,
-    },
-  } }, 
-  { arrayFilters: [{ "elemento.percentual": { $exists: true } }] },
+  { 
+    $push: {
+    valoresNutricionais: {
+      $each: [], 
+      $sort: { percentual: -1 },
+      },
+    }, 
+  },
 );
+
+db.produtos.find({}, { _id: false, nome: true, valoresNutricionais: true });
