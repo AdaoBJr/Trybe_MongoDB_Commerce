@@ -3,7 +3,8 @@
 
 # VSCode repo settings
 .vscode
-
+testes.mongo
+testes2.mongo
 # BSON data files
 assets/produtos.bson
 node_modules
