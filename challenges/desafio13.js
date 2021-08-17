@@ -4,7 +4,7 @@ db.produtos.updateMany(
      { tipo: "sódio", percentual: { $gte: 40 } },
     }, 
   },
- { $push: { tags: "muito muito sodio" } },
+ { $push: { tags: "muito sodio" } },
 ); 
 
 db.produtos.find({ }, { nome: 1, tags: 1, _id: 0 });
