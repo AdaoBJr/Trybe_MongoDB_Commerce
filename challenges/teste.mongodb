@@ -1,8 +1,6 @@
 use("commerce");
 
 
-db.produtos
-.updateMany({ nome: { $in: ["Big Mac", "Quarteirão com Queijo"] } }, { $push: { ingredientes: "bacon" } })
 
-
+db.produtos.updateMany( {}, { $pull: { ingredientes: "cebola" } } )
 db.produtos.find({}, {nome: true, ingredientes: true, _id: false})
