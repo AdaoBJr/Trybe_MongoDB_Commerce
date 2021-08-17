@@ -5,11 +5,10 @@ db.produtos.updateMany(
     {
       tags: {
         $each: ["combo", "tasty"],
-        $sort: 1,
       },
     },
   },
-);
+).sort({ nome: 1 });
 
 db.produtos.find(
   {},
