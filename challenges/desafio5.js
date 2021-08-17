@@ -18,4 +18,4 @@ db.produtos.find(
     nome: true,
     ingredientes: true,
   },
-)
+);
