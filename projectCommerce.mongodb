@@ -1,0 +1,36 @@
+use("commerce")
+db.produtos.find();
+
+// Desafio 1
+use("commerce")
+db.produtos.updateMany(
+  {},
+  { $set: {
+    "criadoPor": "Ronald McDonald",
+  } },
+);
+db.produtos.find(
+  {},
+  {
+    "_id": 0,
+    "nome": 1,
+    "criadoPor": 1,
+  }
+);
+
+// Desafio 2
+use("commerce")
+db.produtos.updateMany(
+  { "valorUnitario": { $exists: false } },
+  { $set: {
+    "valorUnitario": NumberDecimal("0.00"),
+  } },
+);
+db.produtos.find(
+  {},
+  {
+    "_id": 0,
+    "nome": 1,
+    "valorUnitario": 1,
+  }
+);
