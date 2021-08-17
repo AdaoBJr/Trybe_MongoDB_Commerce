@@ -1,3 +1,4 @@
+// query 1:
 db.produtos.updateMany(
   { valorUnitario: { $exists: false } },
   { $set:
@@ -7,6 +8,7 @@ db.produtos.updateMany(
   },
 );
 
+// query 2:
 db.produtos.find(
   {},
   { 

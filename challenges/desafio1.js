@@ -1,3 +1,4 @@
+// query 1:
 db.produtos.updateMany(
   {},
   { $set:
@@ -5,6 +6,7 @@ db.produtos.updateMany(
   },
 );
 
+// query 2:
 db.produtos.find(
   {},
   {
