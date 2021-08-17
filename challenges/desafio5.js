@@ -1,9 +1,6 @@
 db.produtos.updateMany(
-  { nome: { $in: ["Big Mac", "Quarteirão com Queijo", "Cheddar McMelt", "Extra Chicken"] } },
-  { $addToSet: {
-    ingredientes: "Ketchup",
-    },
-  },
+  { nome: { $ne: "McChicken" } },
+  { $addToSet: { ingredientes: "Ketchup" } },
 );
 
 db.produtos.find(
