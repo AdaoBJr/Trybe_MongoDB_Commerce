@@ -1,11 +1,6 @@
 use("commerce");
-db.produtos.updateMany(
-  { $and: [
-    { valoresNutricionais: { $elemMatch:
-    { tipo: "sódio", percentual: { $gt: 20 }, percentual: { $lt: 40 } } } },
-    // {valoresNutricionais: {$elemMatch:{percentual:{$gt: 40}}}}
-  ] },
-  { $push: { tags: "muito sódio" } },
+db.produtos.find(
+  {nome: {$regex: /Mc/i}}
 );
 
 db.produtos.find(
@@ -14,3 +9,5 @@ db.produtos.find(
 );
 
 use("commerce");db.produtos.find();
+
+db.products.find({ sku: { $regex: /^ABC/i } });
