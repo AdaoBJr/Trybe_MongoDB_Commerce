@@ -1,4 +1,4 @@
-db.getCollection("produtos").updateMany(
+db.produtos.updateMany(
   {},
   { $set: { criadoPor: "Ronald McDonald" } },
   { upsert: false },
