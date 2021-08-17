@@ -5,7 +5,7 @@ db.produtos.updateOne(
   },
   {
     $currentDate: {
-      ultimaModificacao:{
+      ultimaModificacao: {
         $type: "date",
       },
     },
@@ -21,5 +21,5 @@ db.produtos.find(
   {
     _id: 0,
     nome: 1,
-  }
+  },
 );
