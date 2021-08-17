@@ -1,9 +1,12 @@
 use('commerce');
 
-db.produtos.updateMany(
-  {},
-  {$push: {valoresNutricionais: { $each: [], 
-  $sort: 1}},
-  );
+db.produtos.createIndex(
+  {descrição: "text"},
+  {default_language:"portuguese"},
+);
 
-db.produtos.find({}, { nome: 1, valoresNutricionais: 1, _id: 0 });
+db.produtos.count({
+  $text: { $search: "frango hamburguer"}
+});
+
+db.produtos.find({}, { nome: 1, tags: 1, _id: 0 });
