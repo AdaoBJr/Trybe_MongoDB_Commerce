@@ -13,7 +13,7 @@ db.produtos.updateMany(
 db.produtos.updateOne(
   { nome: { $eq: "Big Mac" } },
   { $set: {
-      "vendasPorDia.4": 60,
+      "vendasPorDia.3": 60,
     },
   },  
 );
@@ -21,7 +21,7 @@ db.produtos.updateOne(
 db.produtos.updateMany(
   { tags: { $eq: ["bovino", "pão"] } },
   { $set: {
-    "vendasPorDia.7": 120,
+    "vendasPorDia.6": 120,
     },
   },
 );
