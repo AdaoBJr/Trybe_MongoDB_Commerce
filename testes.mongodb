@@ -1,14 +1,10 @@
 use("commerce");
 db.produtos.updateMany(
-  {},
-  {
-    $push: {
-      valoresNutricionais: {
-        $each:[],
-        $sort:{percentual: -1}
-      },
-    },
-  },
+  {$and:[
+    {valoresNutricionais: {$elemMatch:{tipo:"sódio", percentual: {$gt: 40}}}},
+    // {valoresNutricionais: {$elemMatch:{percentual:{$gt: 40}}}}
+  ]},
+  {$push: {tags: "muito sódio"}}
 );
 
 db.produtos.find(
