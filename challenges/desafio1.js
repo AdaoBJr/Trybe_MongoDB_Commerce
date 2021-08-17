@@ -1,7 +1,7 @@
 // Inclui o campo criadoPor em todos os documentos, colocando "Ronald McDonald" no valor desse campo.
 
 db.produtos.updateMany(
-  {},
+  { criadoPor: { $exists: false } },
   { $set: { criadoPor: "Ronald McDonald" } },
 );
 
