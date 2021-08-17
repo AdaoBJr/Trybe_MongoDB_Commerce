@@ -1,6 +1,5 @@
-db.produtos.find();
 db.produtos.updateMany(
-  { nome: "Cheddar McMelt" },
+  { nome: "Quarteirão com Queijo" },
   { $pop: { ingredientes: -1 } },
 );
 
