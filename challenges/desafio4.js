@@ -6,4 +6,4 @@ db.produtos.updateMany(
       },
     },
   );
-  db.produtos.find( {"ultimaModificacao": { $exists: true } }, { nome: 1,_id: 0 });
+  db.produtos.find({ ultimaModificacao: { $exists: true } },  { nome: 1,_id: 0 });

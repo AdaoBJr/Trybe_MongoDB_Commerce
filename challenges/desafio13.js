@@ -1,11 +1,11 @@
-dbb.produtos.updateMany(
-    {},
-    {
-        $push:
-        {
-            tags: { 
-                $each: [ "muito sódio" ],
-            },
-        },
-    },
-);
+// dbb.produtos.updateMany(
+//     {},
+//     {
+//         $push:
+//         {
+//             tags: { 
+//                 $each: [ "muito sódio" ],
+//             },
+//         },
+//     },
+// );
