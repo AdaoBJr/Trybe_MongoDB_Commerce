@@ -18,3 +18,4 @@ db.produtos.updateOne(
 );
 db.produtos.find({}, { _id: false, nome: true, vendasPorDia: true });
 // grato ao denis pela ajuda
+// https://docs.mongodb.com/manual/reference/operator/update/inc/
