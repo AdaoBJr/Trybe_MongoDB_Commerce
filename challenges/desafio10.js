@@ -2,31 +2,31 @@ db.produtos.updateMany(
   {},
   {
     $set: {
-      "vendasPorDia": [0, 0, 0, 0, 0, 0, 0]
+      vendasPorDia: [0, 0, 0, 0, 0, 0, 0],
     },
-  }
+  },
 );
 
 db.produtos.updateMany(
   { nome: "Big Mac" },
   {
     $inc: {
-      "vendasPorDia.4": 60
+      "vendasPorDia.4": 60,
     },
-  }
+  },
 );
 
 db.produtos.updateMany(
   { 
     tags: {
-      $all: ["bovino", "pão" ]
-    }
+      $all: ["bovino", "pão"],
+    },
   },
   {
     $inc: {
-      "vendasPorDia.7": 120
+      "vendasPorDia.7": 120,
     },
-  }
+  },
 );
 
 db.produtos.find(
@@ -35,6 +35,5 @@ db.produtos.find(
     _id: 0,
     nome: 1,
     vendasPorDia: 1,
-  }
+  },
 );
-
