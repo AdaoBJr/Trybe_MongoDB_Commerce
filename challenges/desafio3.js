@@ -18,7 +18,7 @@ db.produtos.updateMany(
   },
   {
     $inc: { avaliacao: 3 },
-  }
+  },
 );
 
 db.produtos.find(
