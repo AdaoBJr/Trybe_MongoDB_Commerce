@@ -9,6 +9,6 @@ db.produtos.find(
     {
       $search: "frango hamburguer",
       $language: "portuguese",
-    }
-  }
+    },
+  },
 ).count();
