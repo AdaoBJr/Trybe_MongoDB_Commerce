@@ -3,6 +3,7 @@ db.produtos.updateOne(
   { $currentDate: { ultimaModificacao: true } },
   { uprset: true },
 );
+
 db.produtos.find(
   { ultimaModificacao: { $exists: true } },
   { _id: 0, nome: 1, avaliacao: 1 },
