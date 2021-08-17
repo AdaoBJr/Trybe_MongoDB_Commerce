@@ -1,5 +1,4 @@
-db.produtos.updateMany(
-  {},
+db.produtos.updateMany({},
   { $pull: { ingredientes: "cebola" } },
 );
 
