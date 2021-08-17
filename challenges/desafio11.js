@@ -3,7 +3,7 @@ db.produtos.updateMany(
   {
     $push: {
       tags: {
-        $each: ["combo", "tastu"],
+        $each: ["combo", "tasty"],
         $sort: 1,
       },
     },
