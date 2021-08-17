@@ -1,3 +1,3 @@
-use("commerce")
-db.produtos.createIndex({ ingredientes: "text" });
-db.produtos.find({ $text: { $search: "\"frango\" \"hamburguer\"" } });
+db.produtos.createIndex({ ingredientes: "text" }, { default_language: "portuguese" });
+db.produtos.count({ $text: { $search: "hamburguer" } });
+
