@@ -24,7 +24,7 @@ db.produtos.updateMany(
   },
   {
     $inc: {
-      "vendasPorDia.7": 120,
+      "vendasPorDia.6": 120,
     },
   },
 );
