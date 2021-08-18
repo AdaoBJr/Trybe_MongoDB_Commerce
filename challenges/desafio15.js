@@ -1,3 +1,3 @@
 db.produtos.count(
-  { ingredientes: { $size: 4 } },
+  { nome: /Mc/i },
 );
