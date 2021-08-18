@@ -4,11 +4,11 @@ db.produtos.updateMany(
   { upsert: true },
 );
 db.produtos.updateMany(
-  { tags: ["bovino"] },
+  { tags: { $in: ["bovino"] } },
   { $inc: { avaliacao: 5 } },
 );
 db.produtos.updateMany(
-  { tags: ["ave"] },
+  { tags: { $in: ["ave"] } },
   { $inc: { avaliacao: 3 } },
 );
 db.produtos.find(
