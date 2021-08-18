@@ -1,10 +1,12 @@
 // query 1:
 db.produtos.updateMany(
-  { "valoresNutricionais.percentual":
+  { "valoresNutricionais.2.percentual":
     { $gte: 40 },
   },
   { $push: 
-    { tags: "muito sódio" },
+    { tags:
+      { $each: ["muito sódio"] },
+    },
   },
 );
 
