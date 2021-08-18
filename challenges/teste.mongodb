@@ -1,6 +1,7 @@
 use("commerce");
 
 
-db.produtos.updateMany( {}, { $push: { valoresNutricionais: { $each: [], $sort: { percentual: -1 } } } });
+db.produtos
+.updateMany( { valoresNutricionais: { $elemMatch: { tipo: "sódio", percentual: { $gte: 40 } }} }, { $push: { tags: "muito sódio" } } )
 
-db.produtos.find( {}, { nome: true, valoresNutricionais: true, _id: false })
+db.produtos.find({}, {nome:true, tags: true, _id: false})
