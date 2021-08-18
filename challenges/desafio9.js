@@ -1,5 +1,5 @@
 db.produtos.updateOne(
-  { nome: "Cheddar McMelt" }, { $pop: { item: 1 } },
+  { nome: "Cheddar McMelt" }, { $pop: { ingredientes: 1 } },
 );
 
 db.produtos.find(
