@@ -7,7 +7,7 @@ db.produtos.updateMany(
  );
 
 db.produtos.updateMany(
-  { tags: { $all: ["ave"] } }, { $set: { avaliacao: NumberInt(5) } },
+  { tags: { $all: ["ave"] } }, { $set: { avaliacao: NumberInt(3) } },
 );
 
 db.produtos.find(
