@@ -1,4 +1,4 @@
-db.produtos.updateOne(
+db.produtos.updateMany(
   { valorUnitario: { $exists: false } }, 
   { valorUnitario: NumberDecimal("0.00") },
 );
