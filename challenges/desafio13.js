@@ -1,8 +1,8 @@
 db.produtos.updateMany(
-  { "valoresNutricionais": {
+  { valoresNutricionais: {
       $elemMatch: {
         tipo: "sódio",
-        percentual: { $gte: 40 }
+        percentual: { $gte: 40 },
       },
     },
   },
