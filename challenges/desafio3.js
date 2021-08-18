@@ -3,11 +3,11 @@ db.produtos.updateMany(
 );
 
 db.produtos.updateMany(
-  { tags: { $all: ["bovino"] } }, { $inc: { avaliacao: NumberInt(5) } },
+  { tags: { $all: ["bovino"] } }, { $set: { avaliacao: NumberInt(5) } },
  );
 
 db.produtos.updateMany(
-  { tags: { $all: ["ave"] } }, { $inc: { avaliacao: NumberInt(3) } },
+  { tags: { $all: ["ave"] } }, { $set: { avaliacao: NumberInt(5) } },
 );
 
 db.produtos.find(
