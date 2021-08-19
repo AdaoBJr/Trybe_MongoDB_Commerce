@@ -17,7 +17,7 @@ db.produtos.updateMany(
 /*
   2.2 - Crie uma query que retorne o nome e valorUnitario de todos os produtos.
 */
-db.produtos.findMany(
+db.produtos.find(
   {},
   {
     _id: 0,

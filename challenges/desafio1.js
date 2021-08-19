@@ -15,7 +15,7 @@ db.produtos.updateMany(
 /*
   1.2 - Crie uma query que retorne o nome e criadoPor de todos os produtos.
 */
-db.produtos.findMany(
+db.produtos.find(
   {},
   {
     _id: 0,

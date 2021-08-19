@@ -46,7 +46,7 @@ db.produtos.updateMany(
 /*
   3.4 - Crie uma query que retorne o nome e avaliacao de todos os sanduíches.
 */
-db.produtos.findMany(
+db.produtos.find(
   {},
   {
     _id: 0,
