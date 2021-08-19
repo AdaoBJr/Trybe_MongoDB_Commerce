@@ -3,7 +3,7 @@
 
   8.1 - Crie uma query que faça a remoção do primeiro ingrediente no sanduíche Quarteirão com Queijo.
 */
-db.produtos.updateMany(
+db.produtos.updateOne(
   {
     nome: "Quarteirão com Queijo",
   },
