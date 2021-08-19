@@ -11,11 +11,11 @@ db.produtos.updateOne(
 );
 
 db.produtos.updateMany(
-  { tags: { $in: ["bovino", "pão"] } },
+  { tags: ["bovino", "pão"] },
   { $inc: { "vendasPorDia.6": 120 } },
 );
 
 db.produtos.find(
   {},
-  { _id: 0, vendasPorDia: 1 },
+  { _id: 0, nome: 1, vendasPorDia: 1 },
 );
