@@ -10,3 +10,4 @@ db.produtos.count(
     { $search: "\"feito com\"" },
   },
 );
+// nem mexi aqui, por que não passou?
