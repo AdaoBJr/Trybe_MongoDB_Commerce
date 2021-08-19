@@ -318,3 +318,19 @@ db.produtos.find(
     "tags": 1,
   },
 );
+
+// Desafio 15
+use("commerce")
+db.produtos.count(
+  {
+    "nome": { $regex: /Mc/i },
+  },
+);
+
+// Desafio 16
+use("commerce")
+db.produtos.count(
+  {
+    "ingredientes": { $size: 4 },
+  },
+);
