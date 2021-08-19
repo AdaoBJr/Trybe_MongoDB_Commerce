@@ -3,8 +3,4 @@
 */
 db.produtos.find(
   { nome: { $regex: /.*mc.*/i } },
-  {
-    _id: 0,
-    $inc: 1,
-  },
 ).count();
