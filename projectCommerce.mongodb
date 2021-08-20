@@ -335,3 +335,21 @@ db.produtos.count(
   },
 );
 
+// Desafio 17
+db.produtos.dropIndex("descricao_text");
+use("commerce")
+db.produtos.createIndex(
+  { "descricao": "text" },
+  { default_language: "portuguese" },
+);
+db.produtos.count(
+  {
+    $text: {
+      $search: "frango hamburguer",
+    },
+  },
+);
+
+// Desafio 18
+use("commerce")
+
