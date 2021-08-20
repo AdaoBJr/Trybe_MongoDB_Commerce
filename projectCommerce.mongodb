@@ -401,3 +401,28 @@ db.produtos.find(
     "curtidas": 1,
   },
 );
+
+// Desafio 21
+use("commerce")
+db.produtos.find(
+  {
+    $expr: { $gt: ["$curtidas", "$vendidos"] },
+  },
+  {
+    "_id": 0,
+    "nome": 1,
+  },
+);
+
+// Desafio 22
+use("commerce")
+db.produtos.find(
+  {
+    "vendidos": { $mod: [5, 0] },
+  },
+  {
+    "_id": 0,
+    "nome": 1,
+    "vendidos": 1,
+  },
+);
