@@ -1,6 +1,0 @@
-use("commerce");
-db.produtos.createIndex({ descricao: "text" });
-db.produtos.find({ 
-  $text: { $search: "frango" },
-  $text: { $search: "hamburguer" }
- });
