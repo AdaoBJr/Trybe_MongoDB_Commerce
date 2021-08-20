@@ -2,8 +2,11 @@
 
 db.produtos.updateMany(
   {},
-  { $set:
-    { valorUnitario: NumberDecimal("0.00") },
+  {
+    $set:
+      {
+        valorUnitario: NumberDecimal("0.00"),
+      },
   },
 );
 
