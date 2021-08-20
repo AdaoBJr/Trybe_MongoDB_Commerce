@@ -10,7 +10,13 @@ db.produtos.updateMany(
     },
   },
   {
-    $addToSet: {
+    /* Solucao que evita repeticao de ingredientes */
+    // $addToSet: {
+    //   ingredientes: "bacon",
+    // },
+
+    /* Solucao que apenas inclui item ao final de ingredientes, sem checar duplicidade */
+    $push: {
       ingredientes: "bacon",
     },
   },
