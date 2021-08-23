@@ -1,8 +1,8 @@
 db.produtos.updateOne(
-  { nome: "Quarteirão com Queijo" },
+  { nome: "Cheddar McMelt" },
   {
     $pop: {
-      ingredientes: -1,
+      ingredientes: 1,
     },
   },
 );
