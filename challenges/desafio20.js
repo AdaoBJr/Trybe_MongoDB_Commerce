@@ -1,9 +1,9 @@
-db.produtos.createIndex(
+db.produtos.updateOne(
   {
     nome: "Big Mac",
   },
   {
-    $set: {
+    $unset: {
       curtidas: "",
     },
   },

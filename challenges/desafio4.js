@@ -1,6 +1,6 @@
 db.produtos.updateOne(
   {
-    name: "Big Mac",
+    nome: "Big Mac",
   },
   {
     $currentDate: {
