@@ -1,6 +1,28 @@
 db.produtos.updateMany(
-    { "valoresNutricionais.tipo": "sódio", "valoresNutricionais.2.percentual": { $gte: 40 } },
-    { $push: { tags: "muito sódio" } },
+    {},
+    {
+      $set: {
+        avaliacao: NumberInt(0),
+      },
+    },
 );
 
-db.produtos.find({ }, { _id: 0, nome: 1, tags: 1 }).pretty();
+db.produtos.updateMany(
+    { "tags.0": "bovino" },
+    {
+      $set: {
+        avaliacao: NumberInt(5),
+      },
+    },
+);
+
+db.produtos.updateMany(
+    { "tags.0": "ave" },
+    {
+      $set: {
+        avaliacao: NumberInt(3),
+      },
+    },
+);
+
+db.produtos.find({}, { _id: 0, nome: 1, avaliacao: 1 });
