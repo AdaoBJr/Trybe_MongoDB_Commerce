@@ -1,8 +1,7 @@
 db.produtos.createIndex(
-  {
-    descricao: "text",
-  },
-);
+  { descricao: "text" },
+  { default_language: "portuguese" },
+  );
 
 db.produtos.count(
   {
