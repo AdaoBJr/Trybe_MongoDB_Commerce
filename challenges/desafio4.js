@@ -1,6 +1,6 @@
 db.produtos.updateMany(
   {
-    name: "Big Mac"
+    name: "Big Mac",
   },
   {
     $currentDate: {
@@ -16,5 +16,5 @@ db.produtos.find(
   {
     _id: false,
     nome: true,
-  }
+  },
 );
