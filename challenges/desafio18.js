@@ -11,3 +11,10 @@ db.produtos.createIndex(
 /*
   18.2 - Crie uma query que retorne a quantidade de documentos que contêm a expressão 'feito com' utilizando o operador $text.
 */
+db.produtos.count(
+  {
+    $text: {
+      $search: "feito com",
+    },
+  },
+);
