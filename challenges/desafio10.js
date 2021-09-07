@@ -20,4 +20,3 @@ db.produtos.updateMany(
       nome: 1,
       vendasPorDia: 1,
     });
-    
